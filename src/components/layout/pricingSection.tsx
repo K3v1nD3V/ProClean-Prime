@@ -190,7 +190,7 @@ export default function PricingSection() {
                                     key={discount}
                                     className="flex items-center gap-3 text-base font-medium text-white/90"
                                 >
-                                    <ChevronRight className="h-4 w-4 shrink-0 text-[rgb(var(--cta))]" />
+                                    <ChevronRight className="h-4 w-4 shrink-0 text-cta" />
                                     <span>{discount}</span>
                                 </div>
                             ))}
@@ -252,7 +252,7 @@ export default function PricingSection() {
 
                     {/* Calculadora de cotización */}
                     <Card className="border-0 rounded-[2rem] bg-white p-6 shadow-lg">
-                        <div className="rounded-2xl bg-gradient-to-r from-primary to-primary-lighter px-5 py-4 text-center">
+                        <div className="rounded-2xl bg-linear-to-r from-primary to-primary-lighter px-5 py-4 text-center">
                             <h4 className="text-lg font-semibold text-white">
                                 Cotiza tu servicio en 1 minuto
                             </h4>
@@ -272,10 +272,10 @@ export default function PricingSection() {
                                         max={maxDays}
                                         value={selectedDays}
                                         onChange={(event) => setSelectedDaysValue(Number(event.target.value))}
-                                        className="h-2 w-full cursor-pointer appearance-none rounded-full bg-zinc-200 accent-[rgb(var(--cta))]"
+                                        className="h-2 w-full cursor-pointer appearance-none rounded-full bg-zinc-200 accent-cta"
                                     />
 
-                                    <span className="min-w-[2rem] text-right text-3xl font-bold text-zinc-700">
+                                    <span className="min-w-8 text-right text-3xl font-bold text-zinc-700">
                                         {selectedDays}
                                     </span>
                                 </div>
@@ -292,7 +292,7 @@ export default function PricingSection() {
                                     onChange={(e) => {
                                         setSelectedDaysValue(e.target.value);
                                     }}
-                                    className="w-full rounded-xl border border-zinc-200 px-4 py-3 text-base outline-none transition focus:border-[rgb(var(--cta))] focus:ring-2 focus:ring-[rgb(var(--cta))]/20 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                    className="w-full rounded-xl border border-zinc-200 px-4 py-3 text-base outline-none transition focus:border-cta focus:ring-2 focus:ring-[rgb(var(--cta))]/20 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                                 />
                             </div>
 
@@ -309,7 +309,7 @@ export default function PricingSection() {
                                             value={plan}
                                             checked={selectedPlan === plan}
                                             onChange={() => setSelectedPlan(plan)}
-                                            className="h-5 w-5 border-zinc-300 accent-[rgb(var(--cta))]"
+                                            className="h-5 w-5 border-zinc-300 accent-cta"
                                         />
                                         <span>{plan}</span>
                                     </label>
@@ -388,39 +388,14 @@ export default function PricingSection() {
                                         </span>
                                     </div>
                                 </div>
-                                // <div>
-                                //     <div>
-                                //         <strong></strong>
-                                //         <p className="mt-4 rounded-lg bg-green-50 p-4 text-center text-sm font-medium text-green-700">
-                                //             Tu cotización estimada es de{" "}
-                                //             <span className="font-bold text-green-900">
-                                //                 {new Intl.NumberFormat("es-CO", {
-                                //                     style: "currency",
-                                //                     currency: "COP",
-                                //                     minimumFractionDigits: 0,
-                                //                 }).format(selectedDays * basePrice)}
-                                //             </span>{" "}
-                                //             para {selectedDays} días.
-                                //         </p>
-                                //     </div>
-                                // </div>
-                                // <p className="mt-4 rounded-lg bg-green-50 p-4 text-center text-sm font-medium text-green-700">
-                                //     Tu cotización estimada es de{" "}
-                                //     <span className="font-bold text-green-900">
-                                //         {new Intl.NumberFormat("es-CO", {
-                                //             style: "currency",
-                                //             currency: "COP",
-                                //             minimumFractionDigits: 0,
-                                //         }).format(selectedDays * basePrice)}
-                                //     </span>{" "}
-                                //     para {selectedDays} días.
-                                // </p>
                             )}
                         </div>
                     </Card>
 
                     {/* CTA */}
-                    <Button className="rounded-full bg-cta py-7 text-lg font-bold text-black shadow-lg transition hover:scale-[1.02] hover:brightness-110">
+                    <Button
+                    variant={"cta"}
+                    className="py-7 text-lg font-bold text-black shadow-lg">
                         Solicitar Cotización
                     </Button>
                 </div>

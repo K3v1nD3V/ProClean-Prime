@@ -24,7 +24,7 @@ export default function Hero() {
         </span>
 
         <h1 className="max-w-4xl text-5xl font-extrabold leading-tight tracking-tight text-white sm:text-6xl md:text-7xl">
-          En Limpiafy perfeccionamos cada detalle de tu negocio, hogar y edificio
+          En Proclean perfeccionamos cada detalle de tu negocio, hogar y edificio
         </h1>
 
         <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-200">
@@ -34,9 +34,11 @@ export default function Hero() {
 
         <div className="mt-10 flex flex-col gap-4">
 
-            <Button className="rounded-full bg-cta px-8 py-6 text-2xl font-semibold text-black transition hover:scale-105 hover:bg-lime-300">
+            <Button variant={"cta"} className="px-8 py-9 text-2xl font-semibold">
                 Reserva tu servicio
-                <CalendarPlus className="ml-2 h-8 w-8 " />
+                <CalendarPlus 
+                    className="ml-2 h-6! w-6!" 
+                />
             </Button>
 
             <button className="w-fit mx-auto my-4 bg-white rounded-full p-3">

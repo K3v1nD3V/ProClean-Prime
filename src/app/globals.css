@@ -6,6 +6,7 @@
 
 @theme inline {
   --color-cta: rgb(var(--cta));
+  --color-cta-darker: rgb(var(--cta-darker));
   --color-primary: rgb(var(--primary));
   --color-primary-lighter: rgb(var(--primary-lighter));
   --color-secundary: rgb(var(--secundary));
@@ -53,6 +54,7 @@
 
 :root {
   --cta: 218 165 32;
+  --cta-darker: 187 142 30;
   --primary: 5 18 36;
   --primary-lighter: 15 40 75;
   --secundary: 142 186 205;

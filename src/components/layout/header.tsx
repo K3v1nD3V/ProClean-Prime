@@ -46,8 +46,8 @@ export default function Header() {
           ))}
         </nav> */}
 
-        <Button className="rounded-full px-8 py-5 text-sm text-black font-medium bg-cta hover:bg-lime-300">
-          <Send className="mr-2 h-5 w-5" />
+        <Button variant={"cta"} className="rpx-8 py-5 text-sm font-medium">
+          <Send className="mr-2 h-5! w-5!" />
           ¡Reserva YA! 
         </Button>
       </div>

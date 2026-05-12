@@ -41,15 +41,9 @@ export default function Hero() {
                 />
             </Button>
 
-            <button className="w-fit mx-auto my-4 bg-white rounded-full p-3">
+            <button className="w-fit mx-auto my-6 bg-white rounded-full p-3">
                 <ArrowDown />
             </button>
-
-            {/* <Button variant={"outline"}>Boton outline</Button>
-            <Button variant={"secondary"}>Boton secondary</Button>
-            <Button variant={"destructive"}>Boton destructive</Button>
-            <Button variant={"link"}>Boton link</Button>
-            <Button variant={"ghost"}>Boton ghost</Button> */}
         </div>
 
       </div>

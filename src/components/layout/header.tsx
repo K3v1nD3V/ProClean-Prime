@@ -25,12 +25,12 @@ export default function Header() {
 
         <Link href="/">
                 <Image
-                    src="/images/proclean2.jpeg"
+                    src="/images/proclean2.png"
                     alt="Logo ProClean"
-                    width={180}
-                    height={60}
+                    width={90}
+                    height={40}
                     priority
-                    className="h-30 w-auto"
+                    className="h-20 w-auto p-4"
                 />
             </Link>
 

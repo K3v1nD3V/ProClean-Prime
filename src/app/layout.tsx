@@ -12,8 +12,11 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "Limpiafy",
+  title: "ProClean Prime",
   description: "Servicios profesionales de limpieza",
+  icons: {
+    icon: "/images/proclean.ico",
+  },
 };
 
 export default function RootLayout({

@@ -55,6 +55,7 @@
 :root {
   --cta: 218 165 32;
   --cta-darker: 187 142 30;
+  /* --cta-lighter: rgb(239 182 37); */
   --primary: 5 18 36;
   --primary-lighter: 15 40 75;
   --secundary: 142 186 205;

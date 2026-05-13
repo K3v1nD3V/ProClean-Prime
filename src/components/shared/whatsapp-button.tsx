@@ -1,9 +1,6 @@
-// src/components/shared/whatsapp-button.tsx
-
 import Link from "next/link";
-import { MessageCircle } from "lucide-react";
 
-const phone = "573238893608";
+const phone = "573103764723";
 const message =
   "Hola, me gustaría solicitar una cotización para un servicio de limpieza.";
 

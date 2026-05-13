@@ -2,6 +2,7 @@ import Hero from "@/components/layout/hero";
 import Card from "@/components/shared/card";
 import PricingSection from "@/components/layout/pricingSection";
 import AboutServiceSection from "@/components/layout/aboutServiceSection";
+import Footer from "@/components/layout/footer";
 // import Image from "next/image";
 const cardInfo = [
   {
@@ -63,6 +64,9 @@ export default function Home() {
 
       {/* Seccion sobre servicios */}
       <AboutServiceSection/>
+
+      {/* Seccion de contacto */}
+      <Footer/>
     </>
   );
 }

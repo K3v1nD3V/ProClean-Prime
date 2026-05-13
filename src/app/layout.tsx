@@ -5,6 +5,7 @@ import "./globals.css";
 
 import { cn } from "@/lib/utils";
 import Header from "@/components/layout/header";
+import WhatsAppButton from "@/components/shared/whatsapp-button";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -38,6 +39,8 @@ export default function RootLayout({
         <main className="flex-1">
           {children}
         </main>
+        
+        <WhatsAppButton />
       </body>
     </html>
   );

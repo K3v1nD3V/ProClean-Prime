@@ -105,7 +105,7 @@ export default function AboutServiceSection() {
       {/* CTA */}
       <div className="mt-16 flex justify-center">
         <Button variant={"cta"} className="px-8 py-9 text-2xl font-semibold">
-                Reserva tu servicio
+                Reserva Tu Servicio
                 <CalendarPlus 
                     className="ml-2 h-6! w-6!" 
                 />

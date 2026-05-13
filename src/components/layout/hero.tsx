@@ -19,9 +19,9 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 text-center">
 
-        <span className="mb-6 text-sm font-semibold uppercase tracking-widest text-cta">
+        {/* <span className="mb-6 text-sm font-semibold uppercase tracking-widest text-cta">
           Startup de aseo y limpieza profesional
-        </span>
+        </span> */}
 
         <h1 className="max-w-4xl text-5xl font-extrabold leading-tight tracking-tight text-white sm:text-6xl md:text-7xl">
           En Proclean perfeccionamos cada detalle de tu negocio, hogar y edificio
@@ -35,14 +35,16 @@ export default function Hero() {
         <div className="mt-10 flex flex-col gap-4">
 
             <Button variant={"cta"} className="px-8 py-9 text-2xl font-semibold">
-                Reserva tu servicio
+                Reserva Tu Servicio
                 <CalendarPlus 
                     className="ml-2 h-6! w-6!" 
                 />
             </Button>
 
-            <button className="w-fit mx-auto my-6 bg-white rounded-full p-3">
-                <ArrowDown />
+            <button
+                className="mx-auto mt-6 flex h-14 w-14 items-center justify-center rounded-full bg-white text-primary shadow-lg animate-[bounce_1.5s_infinite]"
+            >
+                <ArrowDown className="h-7! w-7!" />
             </button>
         </div>
 

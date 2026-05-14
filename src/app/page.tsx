@@ -8,23 +8,23 @@ const cardInfo = [
   {
     title: "Limpieza de Hogar",
     description:
-      "Servicio completo de limpieza para tu hogar, incluyendo cocina, baños, habitaciones y áreas comunes.",
+      "Limpieza del hogar, proporcionando un servicio completo que abarca cocinas, baños, habitaciones, áreas comunes y espacios específicos, adaptándonos a las necesidades de cada familia y garantizando un ambiente impecable y ordenado.",
     imageUrl:
-      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop",
+      "images/services/limpieza-hogar.jpeg",
   },
   {
     title: "Limpieza de Oficinas",
     description:
-      "Mantenimiento profesional para oficinas, garantizando un ambiente limpio y saludable para tus empleados.",
+      "Comprendemos las exigencias de un entorno corporativo y ofrecemos soluciones personalizadas, garantizando un ambiente limpio, organizado y propicio para la productividad.",
     imageUrl:
-      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop",
+      "images/services/limpieza-oficina.jpeg",
   },
   {
-    title: "Limpieza de Edificios",
+    title: "Cuidados Especiales",
     description:
-      "Servicios especializados para la limpieza de edificios comerciales y residenciales, incluyendo áreas comunes y fachadas.",
+      "Ofrecemos servicios especializados de niñera doméstica y gerontodomicilio en todo el país. Nos distinguimos por brindar un cuidado especial y personalizado, asegurando la seguridad, la comodidad y la atención integral de quienes más lo necesitan.",
     imageUrl:
-      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop",
+      "images/services/cuidados-especiales.jpeg",
   },
 ];
 

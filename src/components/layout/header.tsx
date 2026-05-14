@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Send } from "lucide-react";
+import { NotebookPen } from "lucide-react";
 
 // const navLinks = [
 //   {
@@ -23,16 +23,16 @@ export default function Header() {
     <header className="fixed top-0 z-50 w-full  bg-primary backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
 
-        <Link href="/">
-                <Image
-                    src="/images/proclean2.png"
-                    alt="Logo ProClean"
-                    width={90}
-                    height={40}
-                    priority
-                    className="h-20 w-auto p-4"
-                />
-            </Link>
+        <Link href="/" className="flex items-center">
+            <Image
+              src="/images/proclean2.png"
+              alt="Logo ProClean"
+              width={90}
+              height={40}
+              priority
+              className="h-20 w-auto py-2 sm:h-20 md:h-20 lg:h-24"
+            />
+        </Link>
 
         {/* <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
@@ -47,7 +47,7 @@ export default function Header() {
         </nav> */}
 
         <Button variant={"cta"} className="rpx-8 py-5 text-sm font-medium">
-          <Send className="mr-2 h-5! w-5!" />
+          <NotebookPen className="mr-2 h-5! w-5!" />
           ¡Reserva YA! 
         </Button>
       </div>

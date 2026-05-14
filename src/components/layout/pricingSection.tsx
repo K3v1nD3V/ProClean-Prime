@@ -103,7 +103,7 @@ function calcularCotizacion(days: number, plan: string) {
         brutalPrice > 0
             ? Math.round((totalDiscountAmount / brutalPrice) * 100) / 100
             : 0;
-
+    console.log(planDiscount)
     return {
         // Precios
         brutal: brutalPrice,

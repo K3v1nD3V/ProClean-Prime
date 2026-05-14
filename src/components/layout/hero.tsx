@@ -9,7 +9,7 @@ export default function Hero() {
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop')",
+            "url('/images/hero-bg.jpeg')",
         }}
       />
 
@@ -22,14 +22,15 @@ export default function Hero() {
         {/* <span className="mb-6 text-sm font-semibold uppercase tracking-widest text-cta">
           Startup de aseo y limpieza profesional
         </span> */}
-
+         
         <h1 className="max-w-4xl text-5xl font-extrabold leading-tight tracking-tight text-white sm:text-6xl md:text-7xl">
-          En Proclean perfeccionamos cada detalle de tu negocio, hogar y edificio
+          En ProClean Prime, elevamos la limpieza a la excelencia
         </h1>
 
         <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-200">
-          Servicio profesional de limpieza para hogares, oficinas y espacios
-          empresariales con reservas rápidas y atención personalizada.
+          Somos una empresa dedicada a ofrecer servicios de limpieza integral para oficinas, 
+          hogares y edificios, adaptándonos a cada necesidad con un enfoque preciso, 
+          profesional y de alta calidad.
         </p>
 
         <div className="mt-10 flex flex-col gap-4">

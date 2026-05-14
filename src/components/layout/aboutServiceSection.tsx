@@ -1,115 +1,111 @@
-import { CalendarPlus } from "lucide-react";
+import {
+  ShieldCheck,
+  BadgeCheck,
+  GraduationCap,
+  HeartHandshake,
+  CalendarPlus,
+} from "lucide-react";
+
+import Card from "@/components/shared/card";
 import { Button } from "@/components/ui/button";
+
+const pillars = [
+  {
+    icon: ShieldCheck,
+    title: "Seguridad y Confianza",
+    description:
+      "Cada integrante de nuestro equipo pasa por rigurosos procesos de verificación de antecedentes y validación de referencias laborales para garantizar total tranquilidad.",
+  },
+  {
+    icon: BadgeCheck,
+    title: "Seguridad Social al Día",
+    description:
+      "Todas nuestras auxiliares cuentan con afiliación vigente y prestaciones sociales completas, asegurando cumplimiento legal y respaldo integral.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Capacitación Permanente",
+    description:
+      "Participan de programas continuos de formación para mantener altos estándares de servicio, atención y profesionalismo.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Bienestar y Desarrollo",
+    description:
+      "Promovemos el crecimiento personal y el equilibrio emocional mediante espacios de bienestar, relajación y desarrollo humano.",
+  },
+];
 
 export default function AboutServiceSection() {
   return (
-    <section className="mx-auto max-w-5xl px-4 py-24">
-      {/* Línea decorativa */}
-      <div className="mx-auto h-1 w-24 rounded-full bg-primary" />
+    <section className="mx-auto max-w-7xl px-4 py-24">
+      {/* Encabezado */}
+      <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto h-1 w-24 rounded-full bg-primary" />
 
-      {/* Contenido */}
-      <div className="mx-auto mt-12 max-w-4xl space-y-8 text-center text-xs leading-relaxed text-zinc-700 md:text-2xl md:leading-loose">
-        <p>
-          Transformamos el concepto de{" "}
-          <strong className="font-bold text-zinc-900">
-            aseo para empresas
-          </strong>{" "}
-          con un enfoque práctico y flexible.
+        <span className="mt-6 inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold uppercase tracking-wider text-primary">
+          Nuestro Compromiso
+        </span>
+
+        <h2 className="mt-6 text-4xl font-bold leading-tight text-zinc-900 md:text-5xl">
+          Un equipo confiable, capacitado y respaldado
+        </h2>
+
+        <p className="mt-6 text-lg leading-8 text-zinc-600 md:text-xl">
+          Detrás de cada servicio hay personas seleccionadas con rigor,
+          capacitadas de forma continua y acompañadas en su desarrollo
+          profesional y personal.
         </p>
+      </div>
 
-        <p>
-          Nuestro servicio está pensado para oficinas y espacios corporativos
-          que requieren limpieza regular sin necesidad de contratar personal de
-          planta.
-        </p>
+      {/* Grid de beneficios */}
+      <div className="mt-16 grid gap-6 md:grid-cols-2">
+        {pillars.map((pillar) => {
+          const Icon = pillar.icon;
 
-        <p>
-          Puedes programar los días que necesites y nosotros nos encargamos del
-          resto: desde la{" "}
-          <strong className="font-bold text-zinc-900">
-            limpieza del mobiliario
-          </strong>{" "}
-          hasta el{" "}
-          <strong className="font-bold text-zinc-900">
-            mantenimiento de áreas comunes, baños y zonas de cafetería
-          </strong>
-          .
-        </p>
+          return (
+            <Card
+              key={pillar.title}
+              className="group rounded-[2rem] border-0 bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                <Icon className="h-7 w-7" />
+              </div>
 
-        <p>
-          <strong className="font-bold text-zinc-900">
-            Experiencia confiable:
-          </strong>{" "}
-          trabajamos con{" "}
-          <strong className="font-bold text-zinc-900">
-            auxiliares de confianza
-          </strong>{" "}
-          uniformados con el{" "}
-          <strong className="font-bold text-zinc-900">
-            logo de tu empresa
-          </strong>{" "}
-          para reforzar tu{" "}
-          <strong className="font-bold text-zinc-900">
-            imagen corporativa
-          </strong>
-          .
-        </p>
+              <h3 className="mt-6 text-2xl font-bold text-zinc-900">
+                {pillar.title}
+              </h3>
 
-        <p>
-          <strong className="font-bold text-zinc-900">
-            Horarios flexibles y continuidad asegurada:
-          </strong>{" "}
-          tu misma auxiliar, los mismos estándares.
-        </p>
+              <p className="mt-4 leading-8 text-zinc-600">
+                {pillar.description}
+              </p>
+            </Card>
+          );
+        })}
+      </div>
 
-        <p>
-          <strong className="font-bold text-zinc-900">
-            Cobertura integral:
-          </strong>{" "}
-          limpieza de mobiliario, dispositivos electrónicos, baños, áreas de{" "}
-          <strong className="font-bold text-zinc-900">
-            cafetería
-          </strong>{" "}
-          y pasillos.
-        </p>
+      {/* Bloque destacado */}
+      <div className="mt-12 rounded-[2rem] bg-gradient-to-r from-primary to-primary-lighter px-8 py-10 text-center text-white shadow-2xl md:px-12">
+        <h3 className="text-3xl font-bold md:text-4xl">
+          Excelencia en cada visita
+        </h3>
 
-        <p>
-          <strong className="font-bold text-zinc-900">
-            Gestión ambiental:
-          </strong>{" "}
-          manejo de residuos sólidos, clasificación de residuos y recolección de
-          basura según normas locales.
-        </p>
-
-        <p>
-          <strong className="font-bold text-zinc-900">
-            Servicios adicionales:
-          </strong>{" "}
-          diligencias y compras externas, servicio urgente, servicio domingos y
-          festivos, limpieza nocturna y horas extra.
-        </p>
-
-        <p>
-          <strong className="font-bold text-zinc-900">
-            Beneficio económico:
-          </strong>{" "}
-          descuentos por volumen para contratos &gt; 12 días al mes,
-          manteniendo siempre una{" "}
-          <strong className="font-bold text-zinc-900">
-            tarifa competitiva
-          </strong>
-          .
+        <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-white/90">
+          Al invertir en el bienestar y la profesionalización de nuestras
+          auxiliares, garantizamos un servicio consistente, humano y de la más
+          alta calidad para tu empresa.
         </p>
       </div>
 
       {/* CTA */}
       <div className="mt-16 flex justify-center">
-        <Button variant={"cta"} className="px-8 py-9 text-2xl font-semibold">
-                Reserva Tu Servicio
-                <CalendarPlus 
-                    className="ml-2 h-6! w-6!" 
-                />
-            </Button>
+        <Button
+          variant="cta"
+          className="px-8 py-9 text-2xl font-semibold shadow-lg"
+        >
+          Reserva Tu Servicio
+          <CalendarPlus className="ml-2 h-6! w-6!" />
+        </Button>
       </div>
     </section>
   );

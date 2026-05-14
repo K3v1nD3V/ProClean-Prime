@@ -138,3 +138,23 @@
     @apply font-sans;
   }
 }
+ 
+/* animacion para las tarjetas de servicios en la sección "Nuestros Servicios" en la página principal. 
+La animación hace que las tarjetas aparezcan deslizándose hacia arriba y desvaneciéndose al mismo tiempo, 
+con un retraso incremental para cada tarjeta para crear un efecto de cascada. */
+@layer utilities {
+  .animate-slide-up-fade {
+    animation: slide-up-fade 600ms ease-out forwards;
+  }
+}
+
+@keyframes slide-up-fade {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -53,10 +53,11 @@ export default function Home() {
 
           {/* Tarjetas */}
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {cardInfo.map((card) => (
+            {cardInfo.map((card, index) => (
               <Card
                 key={card.title}
-                className="group overflow-hidden rounded-[2rem] border-0 bg-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                className="group overflow-hidden rounded-[2rem] border-0 bg-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl opacity-0 animate-slide-up-fade"
+                style={{ animationDelay: `${index * 120}ms` }}
               >
                 {/* Imagen */}
                 <div className="relative h-64 overflow-hidden">

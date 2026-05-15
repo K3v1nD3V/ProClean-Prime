@@ -1,19 +1,17 @@
-// src/components/layout/footer.tsx
-
 import Image from "next/image";
 import Link from "next/link";
-// Cambia los imports por estos:
 import {
   MapPin,
   Phone,
   Mail,
   Clock3,
   MessageCircle,
-//   InstagramIcon,
-//   FacebookIcon,
+  FileText
+  //   InstagramIcon,
+  //   FacebookIcon,
 } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
+import WhatsAppButton from "@/components/shared/whatsapp-button";
 
 const services = [
   "Limpieza de Hogar",
@@ -30,13 +28,21 @@ const quickLinks = [
   { label: "Contacto", href: "#contacto" },
 ];
 
-const WHATSAPP_NUMBER = "573001234567"; // Reemplaza con el número real
-const WHATSAPP_MESSAGE =
-  "Hola, me gustaría recibir información sobre sus servicios de limpieza.";
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
-const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  WHATSAPP_MESSAGE
-)}`;
+// const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+//   WHATSAPP_MESSAGE
+// )}`;
+
+const contactData = {
+  phone: WHATSAPP_NUMBER,
+  message: "Hola, me gustaría recibir información sobre sus servicios de limpieza.",
+};
+const pqrData = {
+  phone: WHATSAPP_NUMBER,
+  message:
+    "Hola, deseo radicar una PQR (Petición, Queja o Reclamo) relacionada con sus servicios.",
+};
 
 export default function Footer() {
   return (
@@ -82,7 +88,7 @@ export default function Footer() {
               </a>
 
               <a
-                href={whatsappUrl}
+                href={`https://wa.me/${contactData.phone}?text=${encodeURIComponent(contactData.message)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-cta text-black transition hover:scale-105"
@@ -158,15 +164,27 @@ export default function Footer() {
             </div>
 
             <a
-              href={whatsappUrl}
+              href={`https://wa.me/${contactData.phone}?text=${encodeURIComponent(contactData.message)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 block"
             >
-              <Button className="w-full rounded-full bg-cta py-6 font-semibold text-black hover:brightness-110">
+              <Button className="w-full rounded-full bg-cta/90 py-6 font-semibold text-black hover:bg-cta">
                 Solicitar Cotización
               </Button>
             </a>
+              <WhatsAppButton
+                data={pqrData}
+                className="mt-3 block"
+              >
+                <Button
+                  variant="outline"
+                  className="w-full rounded-full border-white/20 bg-white/5 py-6 font-semibold text-white backdrop-blur-sm transition hover:border-[rgb(var(--cta))] hover:bg-white/10 hover:text-white"
+                >
+                  <FileText className="mr-2 h-5 w-5 text-cta" />
+                  Radicar PQR
+                </Button>
+              </WhatsAppButton>
           </div>
         </div>
       </div>

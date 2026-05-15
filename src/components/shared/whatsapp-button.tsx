@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 interface wpData {
-  phone: string;
+  phone: string | number | undefined;
   message: string;
 }
 

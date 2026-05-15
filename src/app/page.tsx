@@ -4,6 +4,8 @@ import PricingSection from "@/components/layout/pricingSection";
 import AboutServiceSection from "@/components/layout/aboutServiceSection";
 import Footer from "@/components/layout/footer";
 import Image from "next/image";
+import Reveal from "@/components/shared/reveal";
+
 const cardInfo = [
   {
     title: "Limpieza de Hogar",
@@ -54,32 +56,34 @@ export default function Home() {
           {/* Tarjetas */}
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {cardInfo.map((card, index) => (
-              <Card
-                key={card.title}
-                className="group overflow-hidden rounded-[2rem] border-0 bg-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl opacity-0 animate-slide-up-fade"
-                style={{ animationDelay: `${index * 120}ms` }}
-              >
-                {/* Imagen */}
-                <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src={card.imageUrl}
-                    alt={card.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
+             <Reveal key={card.title} direction="up" delay={index * 150}>
+                <Card
+                  key={card.title}
+                  className="group overflow-hidden rounded-[2rem] border-0 bg-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                  style={{ animationDelay: `${index * 120}ms` }}
+                >
+                  {/* Imagen */}
+                  <div className="relative h-64 overflow-hidden">
+                    <Image
+                      src={card.imageUrl}
+                      alt={card.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
 
-                {/* Contenido */}
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-zinc-900">
-                    {card.title}
-                  </h3>
+                  {/* Contenido */}
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold text-zinc-900">
+                      {card.title}
+                    </h3>
 
-                  <p className="mt-3 leading-7 text-zinc-600">
-                    {card.description}
-                  </p>
-                </div>
-              </Card>
+                    <p className="mt-3 leading-7 text-zinc-600">
+                      {card.description}
+                    </p>
+                  </div>
+                </Card>
+              </Reveal>
             ))}
           </div>
       </section>

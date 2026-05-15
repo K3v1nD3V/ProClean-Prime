@@ -5,18 +5,16 @@ import { ChevronRight, CheckCircle2 } from "lucide-react";
 
 import Card from "@/components/shared/card";
 import { Button } from "@/components/ui/button";
+import Reveal from "../shared/reveal";
 
 const includedServices = [
-    "Aseo integral de oficinas y espacios de trabajo",
-    "Limpieza y cuidado del mobiliario",
-    "Desinfección de equipos electrónicos",
-    "Higienización profunda de baños",
-    "Recolección y disposición de residuos",
-    "Separación responsable de residuos sólidos",
-    "Servicio de cafetería",
-    "Canal exclusivo de atención por WhatsApp",
-    "Uniforme personalizado con el logo de tu empresa",
-    "Mantenimiento de zonas comunes",
+    "Línea exclusiva de atención",
+    "Uniforme característico porclean prime",
+    "Aseo profesional de los espacios",
+    "Limpieza dedicada a cada necesidad",
+    "Servicio de cafetería express",
+    "Separación responsable de residuos",
+    "Checklist de urgencia",
 ];
 
 const discounts = [
@@ -144,10 +142,19 @@ export default function PricingSection() {
     }
     
     return (    
-        <section className="mx-auto mt-24 max-w-7xl px-4">
+        <section className="mx-auto max-w-7xl px-4">
+            <Reveal direction="right" className="mb-10 text-center">
+                <p className="text-sm font-semibold uppercase tracking-[0.4em] text-cta">Calcula en segundos</p>
+                <h2 className="mt-4 text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl">
+                    Cotiza tu plan por día
+                </h2>
+                <p className="mx-auto mt-3 max-w-2xl text-base leading-7 text-zinc-600 sm:text-lg">
+                    Ajusta los días, elige tu plan y revisa el costo real con descuentos inteligentes.
+                </p>
+            </Reveal>
             <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
                 {/* Columna izquierda */}
-                <div className="rounded-[2rem] bg-primary px-8 py-10 text-white shadow-2xl md:px-12 md:py-14">
+                <Reveal direction="left" className="rounded-[2rem] bg-primary px-8 py-10 text-white shadow-2xl md:px-12 md:py-14">
                     <span className="inline-block rounded-full bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-wider text-cta">
                         Planes Flexibles
                     </span>
@@ -195,10 +202,9 @@ export default function PricingSection() {
                             ))}
                         </div>
                     </div>
-                </div>
-
+                </Reveal>
                 {/* Columna derecha */}
-                <div className="flex flex-col gap-6">
+                <Reveal direction="right" className="flex flex-col gap-6">
                     {/* Tarjeta principal de precio */}
                     <Card className="overflow-hidden border-0 rounded-[2rem] shadow-2xl">
                         <div className="bg-white p-8">
@@ -253,7 +259,7 @@ export default function PricingSection() {
                     <Card className="border-0 rounded-[2rem] bg-white p-6 shadow-lg">
                         <div className="rounded-2xl bg-linear-to-r from-primary to-primary-lighter px-5 py-4 text-center">
                             <h4 className="text-lg font-semibold text-white">
-                                Cotiza tu servicio en 1 minuto
+                                Cotiza tu servicio en segundos
                             </h4>
                         </div>
 
@@ -397,7 +403,7 @@ export default function PricingSection() {
                     className="py-7 text-lg font-bold text-black shadow-lg">
                         Solicitar Cotización
                     </Button>
-                </div>
+                </Reveal>
             </div>
         </section>
     );

@@ -5,7 +5,8 @@ import {
   Phone,
   Mail,
   Clock3,
-  MessageCircle,
+  // MessageCircle,
+  Briefcase,
   FileText
   //   InstagramIcon,
   //   FacebookIcon,
@@ -13,22 +14,23 @@ import {
 import { Button } from "@/components/ui/button";
 import WhatsAppButton from "@/components/shared/whatsapp-button";
 
-const services = [
-  "Limpieza de Hogar",
-  "Limpieza de Oficinas",
-  "Limpieza de Edificios",
-  "Aseo Empresarial por Días",
-];
+// const services = [
+//   "Limpieza de Hogar",
+//   "Limpieza de Oficinas",
+//   "Limpieza de Edificios",
+//   "Aseo Empresarial por Días",
+// ];
 
-const quickLinks = [
-  { label: "Inicio", href: "/" },
-  { label: "Servicios", href: "#servicios" },
-  { label: "Planes", href: "#planes" },
-  { label: "Preguntas Frecuentes", href: "#faq" },
-  { label: "Contacto", href: "#contacto" },
-];
+// const quickLinks = [
+//   { label: "Inicio", href: "/" },
+//   { label: "Servicios", href: "#servicios" },
+//   { label: "Planes", href: "#planes" },
+//   { label: "Preguntas Frecuentes", href: "#faq" },
+//   { label: "Contacto", href: "#contacto" },
+// ];
 
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+const HUMAN_TALENT_WHATSAPP_NUMBER = process.env.HUMAN_TALENT_WHATSAPP_NUMBER;
 
 // const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
 //   WHATSAPP_MESSAGE
@@ -43,152 +45,194 @@ const pqrData = {
   message:
     "Hola, deseo radicar una PQR (Petición, Queja o Reclamo) relacionada con sus servicios.",
 };
+const jobData = {
+  phone: HUMAN_TALENT_WHATSAPP_NUMBER,
+  message:
+    "Hola, estoy interesado en trabajar con ProClean Prime. ¿Podrían brindarme más información sobre las oportunidades laborales disponibles?",
+};
 
 export default function Footer() {
   return (
     <footer className="mt-24 bg-primary text-white">
       {/* Parte superior */}
-      <div className="mx-auto max-w-7xl px-4 py-16">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-          {/* Logo y descripción */}
-          <div>
-            <Link href="/" className="inline-block">
-              <Image
-                src="/images/proclean2.png"
-                alt="ProClean Prime"
-                width={180}
-                height={60}
-                className="h-14 w-auto rounded-md"
-              />
-            </Link>
+<div className="mx-auto max-w-7xl px-4 py-16">
+  <div className="grid gap-14 lg:grid-cols-[1fr_420px] lg:items-start">
+    
+    {/* Branding */}
+    <div className="max-w-xl">
+      <Link href="/" className="inline-block">
+        <Image
+          src="/images/proclean2.png"
+          alt="ProClean Prime"
+          width={180}
+          height={60}
+          className="h-16 w-auto rounded-md"
+        />
+      </Link>
 
-            <p className="mt-6 text-sm leading-7 text-white/75">
-              Soluciones profesionales de limpieza para hogares, oficinas y
-              empresas. Servicio confiable, flexible y con atención
-              personalizada.
+      <p className="mt-6 text-base leading-8 text-white/75">
+        Soluciones profesionales de limpieza para hogares, oficinas
+        y empresas.
+      </p>
+
+      <p className="mt-4 text-sm leading-7 text-white/60">
+        Servicio confiable, flexible y con atención personalizada,
+        respaldado por personal capacitado y cumplimiento legal.
+      </p>
+
+      {/* Mini highlight */}
+      <div className="mt-8 inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur-sm">
+        <div className="h-3 w-3 rounded-full bg-emerald-400 animate-pulse" />
+
+        <div>
+          <p className="text-sm font-semibold text-white">
+            Atención disponible 24/7
+          </p>
+
+          <p className="text-xs text-white/60">
+            Respuesta rápida vía WhatsApp
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* Contacto */}
+    <div
+      id="contacto"
+      className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-7 backdrop-blur-md"
+    >
+      <h3 className="text-2xl font-bold text-white">
+        Contáctanos
+      </h3>
+
+      <p className="mt-2 text-sm leading-6 text-white/60">
+        Estamos listos para ayudarte con tu servicio de limpieza.
+      </p>
+
+      <div className="mt-8 space-y-5">
+        <div className="flex items-start gap-4">
+          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/5">
+            <MapPin className="h-5 w-5 text-cta" />
+          </div>
+
+          <div>
+            <p className="text-sm font-medium text-white">
+              Ubicación
             </p>
 
-            <div className="mt-6 flex items-center gap-3">
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition hover:bg-white/20"
-              >
-                <MessageCircle className="h-5 w-5" />
-              </a>
+            <p className="text-sm text-white/65">
+              Medellín, Colombia
+            </p>
+          </div>
+        </div>
 
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition hover:bg-white/20"
-              >
-                <MessageCircle className="h-5 w-5" />
-              </a>
-
-              <a
-                href={`https://wa.me/${contactData.phone}?text=${encodeURIComponent(contactData.message)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-cta text-black transition hover:scale-105"
-              >
-                <MessageCircle className="h-5 w-5" />
-              </a>
-            </div>
+        <div className="flex items-start gap-4">
+          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/5">
+            <Phone className="h-5 w-5 text-cta" />
           </div>
 
-          {/* Servicios */}
           <div>
-            <h3 className="text-lg font-semibold">Servicios</h3>
+            <p className="text-sm font-medium text-white">
+              Teléfono
+            </p>
 
-            <ul className="mt-6 space-y-3">
-              {services.map((service) => (
-                <li key={service}>
-                  <span className="text-sm text-white/75">{service}</span>
-                </li>
-              ))}
-            </ul>
+            <p className="text-sm text-white/65">
+              +57 300 123 4567
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-start gap-4">
+          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/5">
+            <Mail className="h-5 w-5 text-cta" />
           </div>
 
-          {/* Enlaces rápidos */}
           <div>
-            <h3 className="text-lg font-semibold">Enlaces Rápidos</h3>
+            <p className="text-sm font-medium text-white">
+              Correo electrónico
+            </p>
 
-            <ul className="mt-6 space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-white/75 transition hover:text-white"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <p className="text-sm text-white/65">
+              direccion@procleanprime.com
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-start gap-4">
+          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/5">
+            <Clock3 className="h-5 w-5 text-cta" />
           </div>
 
-          {/* Contacto */}
-          <div id="contacto">
-            <h3 className="text-lg font-semibold">Contacto</h3>
+          <div>
+            <p className="text-sm font-medium text-white">
+              Horario
+            </p>
 
-            <div className="mt-6 space-y-4">
-              <div className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-cta" />
-                <p className="text-sm leading-6 text-white/75">
-                  Medellín, Colombia
-                </p>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <Phone className="mt-0.5 h-5 w-5 shrink-0 text-cta" />
-                <p className="text-sm leading-6 text-white/75">
-                  +57 300 123 4567
-                </p>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <Mail className="mt-0.5 h-5 w-5 shrink-0 text-cta" />
-                <p className="text-sm leading-6 text-white/75">
-                  direccion@procleanprime.com
-                </p>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <Clock3 className="mt-0.5 h-5 w-5 shrink-0 text-cta" />
-                <p className="text-sm leading-6 text-white/75">
-                  Atención 24/7
-                </p>
-              </div>
-            </div>
-
-            <a
-              href={`https://wa.me/${contactData.phone}?text=${encodeURIComponent(contactData.message)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 block"
-            >
-              <Button className="w-full rounded-full bg-cta/90 py-6 font-semibold text-black hover:bg-cta">
-                Solicitar Cotización
-              </Button>
-            </a>
-              <WhatsAppButton
-                data={pqrData}
-                className="mt-3 block"
-              >
-                <Button
-                  variant="outline"
-                  className="w-full rounded-full border-white/20 bg-white/5 py-6 font-semibold text-white backdrop-blur-sm transition hover:border-[rgb(var(--cta))] hover:bg-white/10 hover:text-white"
-                >
-                  <FileText className="mr-2 h-5 w-5 text-cta" />
-                  Radicar PQR
-                </Button>
-              </WhatsAppButton>
+            <p className="text-sm text-white/65">
+              Atención 24/7
+            </p>
           </div>
         </div>
       </div>
 
+      {/* Botones */}
+      <div className="mt-8 space-y-3">
+        <WhatsAppButton
+          data={contactData}
+          className="block"
+        >
+          <Button className="w-full rounded-full bg-cta py-6 text-base font-semibold text-black hover:bg-cta/90">
+            Solicitar Cotización
+          </Button>
+        </WhatsAppButton>
+
+        <WhatsAppButton
+          data={pqrData}
+          className="block"
+        >
+          <Button
+            variant="outline"
+            className="w-full rounded-full border-white/15 bg-white/5 py-6 font-semibold text-white hover:bg-white/10"
+          >
+            <FileText className="mr-2 h-5 w-5 text-cta" />
+            Radicar PQR
+          </Button>
+        </WhatsAppButton>
+      </div>
+    </div>
+  </div>
+
+  {/* Trabaja con nosotros */}
+  <div className="mt-14 rounded-[2rem] border border-white/10 bg-gradient-to-r from-white/[0.04] to-white/[0.02] p-7 backdrop-blur-md md:p-8">
+    <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+      <div className="flex items-start gap-4">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-cta/15">
+          <Briefcase className="h-7 w-7 text-cta" />
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold text-white">
+            ¿Quieres trabajar con nosotros?
+          </h3>
+
+          <p className="mt-2 max-w-xl text-sm leading-7 text-white/65">
+            Únete al equipo profesional de Pro Clean Prime y
+            crece con nosotros.
+          </p>
+        </div>
+      </div>
+
+      <WhatsAppButton
+        data={jobData}
+        className="w-full md:w-auto"
+      >
+        <Button className="w-full rounded-full bg-cta px-8 py-6 text-black hover:bg-cta/90 md:w-auto">
+          Trabaja con nosotros
+        </Button>
+      </WhatsAppButton>
+    </div>
+  </div>
+</div>
       {/* Línea divisoria */}
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 text-center md:flex-row md:text-left">
@@ -242,3 +286,145 @@ export default function Footer() {
     </footer>
   );
 }
+
+// {/* Parte superior */}
+//       <div className="mx-auto max-w-7xl px-4 py-16">
+//         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+//           {/* Logo y descripción */}
+//           <div>
+//             <Link href="/" className="inline-block">
+//               <Image
+//                 src="/images/proclean2.png"
+//                 alt="ProClean Prime"
+//                 width={180}
+//                 height={60}
+//                 className="h-14 w-auto rounded-md"
+//               />
+//             </Link>
+
+//             <p className="mt-6 text-sm leading-7 text-white/75">
+//               Soluciones profesionales de limpieza para hogares, oficinas y
+//               empresas. Servicio confiable, flexible y con atención
+//               personalizada.
+//             </p>
+
+//             <div className="mt-6 flex items-center gap-3">
+//               <a
+//                 href="https://instagram.com"
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition hover:bg-white/20"
+//               >
+//                 <MessageCircle className="h-5 w-5" />
+//               </a>
+
+//               <a
+//                 href="https://facebook.com"
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition hover:bg-white/20"
+//               >
+//                 <MessageCircle className="h-5 w-5" />
+//               </a>
+
+//               <a
+//                 href={`https://wa.me/${contactData.phone}?text=${encodeURIComponent(contactData.message)}`}
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//                 className="flex h-10 w-10 items-center justify-center rounded-full bg-cta text-black transition hover:scale-105"
+//               >
+//                 <MessageCircle className="h-5 w-5" />
+//               </a>
+//             </div>
+//           </div>
+
+//           {/* Servicios */}
+//           <div>
+//             <h3 className="text-lg font-semibold">Servicios</h3>
+
+//             <ul className="mt-6 space-y-3">
+//               {services.map((service) => (
+//                 <li key={service}>
+//                   <span className="text-sm text-white/75">{service}</span>
+//                 </li>
+//               ))}
+//             </ul>
+//           </div>
+
+//           {/* Enlaces rápidos */}
+//           <div>
+//             <h3 className="text-lg font-semibold">Enlaces Rápidos</h3>
+
+//             <ul className="mt-6 space-y-3">
+//               {quickLinks.map((link) => (
+//                 <li key={link.label}>
+//                   <Link
+//                     href={link.href}
+//                     className="text-sm text-white/75 transition hover:text-white"
+//                   >
+//                     {link.label}
+//                   </Link>
+//                 </li>
+//               ))}
+//             </ul>
+//           </div>
+
+//           {/* Contacto */}
+//           <div id="contacto">
+//             <h3 className="text-lg font-semibold">Contacto</h3>
+
+//             <div className="mt-6 space-y-4">
+//               <div className="flex items-start gap-3">
+//                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-cta" />
+//                 <p className="text-sm leading-6 text-white/75">
+//                   Medellín, Colombia
+//                 </p>
+//               </div>
+
+//               <div className="flex items-start gap-3">
+//                 <Phone className="mt-0.5 h-5 w-5 shrink-0 text-cta" />
+//                 <p className="text-sm leading-6 text-white/75">
+//                   +57 300 123 4567
+//                 </p>
+//               </div>
+
+//               <div className="flex items-start gap-3">
+//                 <Mail className="mt-0.5 h-5 w-5 shrink-0 text-cta" />
+//                 <p className="text-sm leading-6 text-white/75">
+//                   direccion@procleanprime.com
+//                 </p>
+//               </div>
+
+//               <div className="flex items-start gap-3">
+//                 <Clock3 className="mt-0.5 h-5 w-5 shrink-0 text-cta" />
+//                 <p className="text-sm leading-6 text-white/75">
+//                   Atención 24/7
+//                 </p>
+//               </div>
+//             </div>
+
+//             <a
+//               href={`https://wa.me/${contactData.phone}?text=${encodeURIComponent(contactData.message)}`}
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               className="mt-6 block"
+//             >
+//               <Button className="w-full rounded-full bg-cta/90 py-6 font-semibold text-black hover:bg-cta">
+//                 Solicitar Cotización
+//               </Button>
+//             </a>
+//               <WhatsAppButton
+//                 data={pqrData}
+//                 className="mt-3 block"
+//               >
+//                 <Button
+//                   variant="outline"
+//                   className="w-full rounded-full border-white/20 bg-white/5 py-6 font-semibold text-white backdrop-blur-sm transition hover:border-[rgb(var(--cta))] hover:bg-white/10 hover:text-white"
+//                 >
+//                   <FileText className="mr-2 h-5 w-5 text-cta" />
+//                   Radicar PQR
+//                 </Button>
+//               </WhatsAppButton>
+//           </div>
+//         </div>
+//       </div>

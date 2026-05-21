@@ -1,5 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { CalendarPlus, ArrowDown } from "lucide-react";
+import WhatAppButton from "@/components/shared/whatsapp-button";
+
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+const whatsappData = {
+  phone: WHATSAPP_NUMBER,
+  message:
+    "Hola, me gustaría solicitar una cotización para un servicio de limpieza.",
+};
+
 export default function Hero() {
   return (
    <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20">
@@ -34,13 +43,14 @@ export default function Hero() {
         </p>
 
         <div className="mt-10 flex flex-col gap-4">
-
-            <Button variant={"cta"} className="px-8 py-9 text-2xl font-semibold">
-                Reserva Tu Servicio
-                <CalendarPlus 
-                    className="ml-2 h-6! w-6!" 
-                />
-            </Button>
+            <WhatAppButton data={whatsappData}>
+              <Button variant={"cta"} className="px-8 py-9 text-2xl font-semibold">
+                  Reserva Tu Servicio
+                  <CalendarPlus 
+                      className="ml-2 h-6! w-6!" 
+                      />
+              </Button>
+            </WhatAppButton>
 
             <button
                 className="mx-auto mt-6 flex h-14 w-14 items-center justify-center rounded-full bg-white text-primary shadow-lg animate-[bounce_1.5s_infinite]"

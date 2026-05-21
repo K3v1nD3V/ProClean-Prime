@@ -7,6 +7,9 @@ import Card from "@/components/shared/card";
 import { Button } from "@/components/ui/button";
 import Reveal from "../shared/reveal";
 
+
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+
 const includedServices = [
     "Línea exclusiva de atención",
     "Uniforme característico porclean prime",
@@ -143,12 +146,13 @@ export default function PricingSection() {
     
     return (    
         <section className="mx-auto max-w-7xl px-4">
-            <Reveal direction="right" className="mb-10 text-center">
-                <p className="text-sm font-semibold uppercase tracking-[0.4em] text-cta">Calcula en segundos</p>
-                <h2 className="mt-4 text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl">
+            
+            <Reveal direction="right" className="text-center relative left-1/2 right-1/2 mx-[-50vw] w-screen bg-linear-to-r from-primary to-primary-lighter py-8 mb-6">
+                <p className="text-sm font-semibold uppercase tracking-[0.4em] text-white">Calcula en segundos</p>
+                <h2 className="mt-4 text-4xl font-bold tracking-tight text-cta sm:text-5xl">
                     Cotiza tu plan por día
                 </h2>
-                <p className="mx-auto mt-3 max-w-2xl text-base leading-7 text-zinc-600 sm:text-lg">
+                <p className="mx-auto mt-3 max-w-2xl text-base leading-7 text-white sm:text-lg">
                     Ajusta los días, elige tu plan y revisa el costo real con descuentos inteligentes.
                 </p>
             </Reveal>

@@ -1,5 +1,6 @@
 import Hero from "@/components/layout/hero";
 import Card from "@/components/shared/card";
+import LegalBanner from "@/components/layout/legal-banner";
 import PricingSection from "@/components/layout/pricingSection";
 import AboutServiceSection from "@/components/layout/aboutServiceSection";
 import Footer from "@/components/layout/footer";
@@ -87,7 +88,8 @@ export default function Home() {
             ))}
           </div>
       </section>
-            
+
+      <LegalBanner/>  
       {/* Seccion sobre servicios */}
       <AboutServiceSection/>
     

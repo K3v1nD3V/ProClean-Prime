@@ -11,6 +11,14 @@ import {
 import Card from "@/components/shared/card";
 import { Button } from "@/components/ui/button";
 import Reveal from "@/components/shared/reveal"; // <-- Importa el componente
+import WhatAppButton from "@/components/shared/whatsapp-button";
+
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+const whatsappData = {
+  phone: WHATSAPP_NUMBER,
+  message:
+    "Hola, me gustaría solicitar una cotización para un servicio de limpieza.",
+};
 
 const pillars = [
   {
@@ -113,13 +121,15 @@ export default function AboutServiceSection() {
       {/* CTA */}
       <Reveal direction="right" delay={300}>
         <div className="mt-16 flex justify-center">
-          <Button
-            variant="cta"
-            className="px-8 py-9 text-2xl font-semibold shadow-lg"
-          >
-            Reserva Tu Servicio
-            <CalendarPlus className="ml-2 h-6! w-6!" />
-          </Button>
+          <WhatAppButton data={whatsappData}>
+            <Button
+              variant="cta"
+              className="px-8 py-9 text-2xl font-semibold shadow-lg"
+              >
+              Reserva Tu Servicio
+              <CalendarPlus className="ml-2 h-6! w-6!" />
+            </Button>
+          </WhatAppButton>
         </div>
       </Reveal>
     </section>

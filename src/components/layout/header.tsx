@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { NotebookPen } from "lucide-react";
+import WhatsAppButton from "../shared/whatsapp-button";
 
 // const navLinks = [
 //   {
@@ -17,6 +18,13 @@ import { NotebookPen } from "lucide-react";
 //     href: "/reservas",
 //   },
 // ];
+
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+const whatsappData = {
+  phone: WHATSAPP_NUMBER,
+  message:
+    "Hola, me gustaría solicitar una cotización para un servicio de limpieza.",
+};
 
 export default function Header() {
   return (
@@ -45,11 +53,12 @@ export default function Header() {
             </a>
           ))}
         </nav> */}
-
-        <Button variant={"cta"} className="rpx-8 py-5 text-sm font-medium">
-          <NotebookPen className="mr-2 h-5! w-5!" />
-          ¡Reserva YA! 
-        </Button>
+        <WhatsAppButton data={whatsappData}>
+          <Button variant={"cta"} className="rpx-8 py-5 text-sm font-medium">
+            <NotebookPen className="mr-2 h-5! w-5!" />
+            ¡Reserva YA! 
+          </Button>
+        </WhatsAppButton>
       </div>
     </header>
   );

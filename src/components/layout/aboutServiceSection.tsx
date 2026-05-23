@@ -17,7 +17,7 @@ const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 const whatsappData = {
   phone: WHATSAPP_NUMBER,
   message:
-    "Hola, me gustaría solicitar una cotización para un servicio de limpieza.",
+    "Hola, me gustaría agendar un servicio de limpieza.",
 };
 
 const pillars = [

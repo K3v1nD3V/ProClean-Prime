@@ -38,17 +38,17 @@ const HUMAN_TALENT_WHATSAPP_NUMBER = process.env.HUMAN_TALENT_WHATSAPP_NUMBER;
 
 const contactData = {
   phone: WHATSAPP_NUMBER,
-  message: "Hola, me gustaría recibir información sobre sus servicios de limpieza.",
+  message: "Hola, me gustaría agendar un servicio de limpieza.",
 };
 const pqrData = {
-  phone: WHATSAPP_NUMBER,
+  phone: HUMAN_TALENT_WHATSAPP_NUMBER,
   message:
     "Hola, deseo radicar una PQR (Petición, Queja o Reclamo) relacionada con sus servicios.",
 };
 const jobData = {
   phone: HUMAN_TALENT_WHATSAPP_NUMBER,
   message:
-    "Hola, estoy interesado en trabajar con ProClean Prime. ¿Podrían brindarme más información sobre las oportunidades laborales disponibles?",
+    "Hola, estoy interesado(a) en trabajar con ustedes. ¿Qué debo hacer?",
 };
 
 export default function Footer() {

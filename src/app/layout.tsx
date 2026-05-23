@@ -31,7 +31,7 @@ export default function RootLayout({
     <html
       lang="es"
       className={cn(
-        "h-full antialiased",
+        "h-full scroll-smooth antialiased",
         figtree.variable
       )}
     >

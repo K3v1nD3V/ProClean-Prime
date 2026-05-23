@@ -4,20 +4,24 @@ import { Button } from "@/components/ui/button";
 import { NotebookPen } from "lucide-react";
 import WhatsAppButton from "../shared/whatsapp-button";
 
-// const navLinks = [
-//   {
-//     label: "Inicio",
-//     href: "/",
-//   },
-//   {
-//     label: "Servicios",
-//     href: "/servicios",
-//   },
-//   {
-//     label: "Reservas",
-//     href: "/reservas",
-//   },
-// ];
+const navLinks = [
+  {
+    label: "Inicio",
+    href: "/",
+  },
+  {
+    label: "Servicios",
+    href: "#servicios",
+  },
+  {
+    label: "Compromisos",
+    href: "#compromisos",
+  },
+  {
+    label: "Cotización",
+    href: "#cotizacion",
+  },
+];
 
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 const whatsappData = {
@@ -38,11 +42,11 @@ export default function Header() {
               width={160}
               height={150}
               priority
-              className="h-30 w-auto py-2 sm:h-20 md:h-20 lg:h-40"
+              className="h-20 w-auto py-2 sm:h-20 md:h-20 lg:h-20"
             />
         </Link>
 
-        {/* <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <a
               key={link.label}
@@ -52,7 +56,7 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-        </nav> */}
+        </nav>
         <WhatsAppButton data={whatsappData}>
           <Button variant={"cta"} className="rpx-8 py-5 text-sm font-medium">
             <NotebookPen className="mr-2 h-5! w-5!" />

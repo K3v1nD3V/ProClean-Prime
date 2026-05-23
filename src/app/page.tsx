@@ -37,7 +37,7 @@ export default function Home() {
       <Hero/>
       
       {/* Sección de servicios destacada */}
-      <section className="relative z-20 mx-auto -mt-32 max-w-7xl px-4">
+      <section id="servicios" className="relative z-20 mx-auto -mt-32 max-w-7xl px-4">
           {/* Encabezado */}
           {/* <div className="mx-auto max-w-3xl text-center">
             <span className="inline-block rounded-full bg-white px-4 py-2 text-sm font-semibold uppercase tracking-wider text-primary shadow-md">

@@ -6,9 +6,14 @@ import { ChevronRight, CheckCircle2 } from "lucide-react";
 import Card from "@/components/shared/card";
 import { Button } from "@/components/ui/button";
 import Reveal from "../shared/reveal";
-
+import WhatAppButton from "@/components/shared/whatsapp-button";
 
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+
+const whatsappData = {
+    phone: WHATSAPP_NUMBER,
+    message: "Hola, me gustaría solicitar una cotización para un servicio de limpieza.",
+};
 
 const includedServices = [
     "Línea exclusiva de atención",
@@ -145,7 +150,7 @@ export default function PricingSection() {
     }
     
     return (    
-        <section className="mx-auto max-w-7xl px-4">
+        <section id="cotizacion" className="mx-auto max-w-7xl px-4">
             
             <Reveal direction="right" className="text-center relative left-1/2 right-1/2 mx-[-50vw] w-screen bg-linear-to-r from-primary to-primary-lighter py-8 mb-6">
                 <p className="text-sm font-semibold uppercase tracking-[0.4em] text-white">Calcula en segundos</p>
@@ -402,11 +407,13 @@ export default function PricingSection() {
                     </Card>
 
                     {/* CTA */}
-                    <Button
-                    variant={"cta"}
-                    className="py-7 text-lg font-bold text-black shadow-lg">
-                        Solicitar Cotización
-                    </Button>
+                    <WhatAppButton data={whatsappData}>
+                        <Button
+                        variant={"cta"}
+                        className="w-full py-7 text-lg font-bold text-black shadow-lg">
+                            Solicitar Cotización
+                        </Button>
+                    </WhatAppButton>
                 </Reveal>
             </div>
         </section>

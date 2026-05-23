@@ -1,5 +1,4 @@
 // AboutServiceSection.tsx
-
 import {
   ShieldCheck,
   BadgeCheck,
@@ -49,7 +48,7 @@ const pillars = [
 
 export default function AboutServiceSection() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-24">
+    <section id="compromisos" className="mx-auto max-w-7xl px-4 py-24">
       {/* Encabezado */}
       <Reveal direction="left">
         <div className="mx-auto max-w-3xl text-center">

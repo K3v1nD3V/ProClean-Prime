@@ -33,12 +33,12 @@ export default function Header() {
 
         <Link href="/" className="flex items-center">
             <Image
-              src="/images/proclean2.png"
+              src="/images/logo-proclean-prime.svg"
               alt="Logo ProClean"
-              width={90}
-              height={40}
+              width={160}
+              height={150}
               priority
-              className="h-20 w-auto py-2 sm:h-20 md:h-20 lg:h-24"
+              className="h-30 w-auto py-2 sm:h-20 md:h-20 lg:h-40"
             />
         </Link>
 

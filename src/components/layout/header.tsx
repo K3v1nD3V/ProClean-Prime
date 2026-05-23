@@ -33,7 +33,7 @@ export default function Header() {
 
         <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo-proclean-prime.svg"
+              src="/images/proclean2.png"
               alt="Logo ProClean"
               width={160}
               height={150}

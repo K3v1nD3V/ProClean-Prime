@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "ProClean Prime",
   description: "Servicios profesionales de limpieza",
   icons: {
-    icon: "/images/proclean.ico",
+    icon: "/images/procleanIcon.svg",
   },
 };
 

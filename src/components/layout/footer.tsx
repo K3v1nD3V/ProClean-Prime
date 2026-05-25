@@ -62,11 +62,11 @@ export default function Footer() {
     <div className="max-w-xl">
       <Link href="/" className="inline-block">
         <Image
-          src="/images/proclean2.png"
+          src="/images/logoproclean.svg"
           alt="ProClean Prime"
           width={180}
           height={60}
-          className="h-16 w-auto rounded-md"
+          className="h-18 w-auto rounded-md"
         />
       </Link>
 
@@ -153,7 +153,7 @@ export default function Footer() {
             </p>
 
             <p className="text-sm text-white/65">
-              direccion@procleanprime.com
+              direccion@pro-clean-prime.com
             </p>
           </div>
         </div>

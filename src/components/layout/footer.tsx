@@ -137,7 +137,7 @@ export default function Footer() {
             </p>
 
             <p className="text-sm text-white/65">
-              +57 300 123 4567
+              +57 3046048958
             </p>
           </div>
         </div>

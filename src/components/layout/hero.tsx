@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CalendarPlus, ArrowDown } from "lucide-react";
+import Link from "next/link";
 import WhatAppButton from "@/components/shared/whatsapp-button";
 
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
@@ -43,14 +44,14 @@ export default function Hero() {
         </p>
 
         <div className="mt-10 flex flex-col gap-4">
-            <WhatAppButton data={whatsappData}>
+            <Link href="/reserva" className="mx-auto">
               <Button variant={"cta"} className="px-8 py-9 text-2xl font-semibold">
                   Reserva Tu Servicio
                   <CalendarPlus 
                       className="ml-2 h-6! w-6!" 
                       />
               </Button>
-            </WhatAppButton>
+            </Link>
 
             <button
                 className="mx-auto mt-6 flex h-14 w-14 items-center justify-center rounded-full bg-white text-primary shadow-lg animate-[bounce_1.5s_infinite]"

@@ -6,6 +6,7 @@ import {
   HeartHandshake,
   CalendarPlus,
 } from "lucide-react";
+import Link from "next/link";
 
 import Card from "@/components/shared/card";
 import { Button } from "@/components/ui/button";
@@ -120,7 +121,7 @@ export default function AboutServiceSection() {
       {/* CTA */}
       <Reveal direction="right" delay={300}>
         <div className="mt-16 flex justify-center">
-          <WhatAppButton data={whatsappData}>
+          <Link href="/reserva">
             <Button
               variant="cta"
               className="px-8 py-9 text-2xl font-semibold shadow-lg"
@@ -128,7 +129,7 @@ export default function AboutServiceSection() {
               Reserva Tu Servicio
               <CalendarPlus className="ml-2 h-6! w-6!" />
             </Button>
-          </WhatAppButton>
+          </Link>
         </div>
       </Reveal>
     </section>

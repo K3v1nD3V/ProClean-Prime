@@ -2,10 +2,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, Menu, NotebookPen, X } from "lucide-react";
-import WhatsAppButton from "../shared/whatsapp-button";
 
 const navLinks = [
   {
@@ -35,15 +34,14 @@ const whatsappData = {
 
 export default function Header() {
   const pathname = usePathname();
-  const router = useRouter();
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const isReservaPage = pathname?.startsWith("/reserva");
 
   const handleGoBack = () => {
     if (typeof window !== "undefined" && window.history.length > 1) {
-      router.back();
+      window.history.back();
     } else {
-      router.push("/");
+      window.location.href = "/";
     }
   };
 
@@ -93,7 +91,7 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <WhatsAppButton data={whatsappData}>
+          <Link href="/reserva" className="hidden md:inline-flex">
             <Button
               variant="cta"
               className="hidden rounded-full rpx-8 py-5 text-sm font-medium md:inline-flex"
@@ -101,7 +99,7 @@ export default function Header() {
               <NotebookPen className="mr-2 h-5 w-5" />
               ¡Reserva YA!
             </Button>
-          </WhatsAppButton>
+          </Link>
 
           <button
             type="button"

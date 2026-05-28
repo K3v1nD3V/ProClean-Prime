@@ -25,7 +25,7 @@ const cardInfo = [
   {
     title: "Cuidados Especiales",
     description:
-      "Ofrecemos servicios especializados de niñera doméstica y gerontodomicilio en todo el país. Nos distinguimos por brindar un cuidado especial y personalizado, asegurando la seguridad, la comodidad y la atención integral de quienes más lo necesitan.",
+      "Ofrecemos servicios especializados de niñera doméstica y atención domiciliaria para adultos mayores. Nos distinguimos por brindar un cuidado personalizado y de calidad, garantizando la seguridad, la comodidad y el bienestar integral de quienes más lo necesitan.",
     imageUrl:
       "/images/services/cuidados-especiales.jpeg",
   },

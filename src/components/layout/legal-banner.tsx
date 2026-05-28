@@ -18,8 +18,8 @@ export default function LegalBanner() {
               </div>
 
               <h2 className="mt-5 text-3xl font-bold leading-tight text-white md:text-4xl">
-                Sabías que todas nuestras auxiliares cuentan con todas las
-                prestaciones sociales legales vigentes.
+                ¿Sabías que todas nuestras auxiliares cuentan con todas las
+                prestaciones sociales legales vigentes?
               </h2>
 
               <p className="mt-4 text-lg leading-8 text-white/80">

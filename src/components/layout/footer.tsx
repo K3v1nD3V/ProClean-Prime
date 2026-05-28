@@ -216,7 +216,7 @@ export default function Footer() {
           </h3>
 
           <p className="mt-2 max-w-xl text-sm leading-7 text-white/65">
-            Únete al equipo profesional de Pro Clean Prime y
+            Únete al equipo profesional de ProClean Prime y
             crece con nosotros.
           </p>
         </div>

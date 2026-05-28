@@ -2,8 +2,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Menu, NotebookPen, X } from "lucide-react";
+import { ChevronLeft, Menu, NotebookPen, X } from "lucide-react";
 import WhatsAppButton from "../shared/whatsapp-button";
 
 const navLinks = [
@@ -33,11 +34,41 @@ const whatsappData = {
 };
 
 export default function Header() {
+  const pathname = usePathname();
+  const router = useRouter();
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const isReservaPage = pathname?.startsWith("/reserva");
+
+  const handleGoBack = () => {
+    if (typeof window !== "undefined" && window.history.length > 1) {
+      router.back();
+    } else {
+      router.push("/");
+    }
+  };
+
+  if (isReservaPage) {
+    return (
+      <header className="fixed inset-x-0 top-4 z-50 flex justify-center px-4">
+        <div className="w-full max-w-7xl">
+          <div className="mx-auto flex w-full bg-black/10 items-center justify-start rounded-full borderpx-4 py-3 px-6 backdrop-blur-md shadow-lg">
+            <button
+              type="button"
+              onClick={handleGoBack}
+              className="inline-flex items-center gap-2 rounded-full border border-black/20 bg-white/10 px-4 py-2 text-sm font-semibold transition hover:bg-black/15"
+            >
+              <ChevronLeft className="h-4 w-4" />
+              Volver
+            </button>
+          </div>
+        </div>
+      </header>
+    );
+  }
 
   return (
     <header className="fixed top-0 z-50 w-full bg-primary backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
         <Link href="/" className="flex items-center">
           <Image
             src="/images/logoproclean.svg"

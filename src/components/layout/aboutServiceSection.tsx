@@ -10,15 +10,7 @@ import Link from "next/link";
 
 import Card from "@/components/shared/card";
 import { Button } from "@/components/ui/button";
-import Reveal from "@/components/shared/reveal"; // <-- Importa el componente
-import WhatAppButton from "@/components/shared/whatsapp-button";
-
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
-const whatsappData = {
-  phone: WHATSAPP_NUMBER,
-  message:
-    "Hola, me gustaría agendar un servicio de limpieza.",
-};
+import Reveal from "@/components/shared/reveal";
 
 const pillars = [
   {
@@ -105,7 +97,7 @@ export default function AboutServiceSection() {
 
       {/* Bloque destacado */}
       <Reveal direction="left" delay={200}>
-        <div className="mt-12 rounded-[2rem] bg-gradient-to-r from-primary to-primary-lighter px-8 py-10 text-center text-white shadow-2xl md:px-12">
+        <div className="mt-12 rounded-[2rem] bg-linear-to-r from-primary to-primary-lighter px-8 py-10 text-center text-white shadow-2xl md:px-12">
           <h3 className="text-3xl font-bold md:text-4xl">
             Excelencia en cada visita
           </h3>

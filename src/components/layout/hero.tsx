@@ -1,14 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CalendarPlus, ArrowDown } from "lucide-react";
 import Link from "next/link";
-import WhatAppButton from "@/components/shared/whatsapp-button";
-
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
-const whatsappData = {
-  phone: WHATSAPP_NUMBER,
-  message:
-    "Hola, me gustaría agendar un servicio de limpieza.",
-};
 
 export default function Hero() {
   return (

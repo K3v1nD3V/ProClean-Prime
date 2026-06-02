@@ -3,7 +3,7 @@ import { ShieldCheck, BadgeCheck } from "lucide-react";
 export default function LegalBanner() {
   return (
     <section className="mx-auto mt-20 max-w-7xl px-4">
-      <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-r from-primary via-primary to-primary/95 p-[1px] shadow-2xl">
+      <div className="relative overflow-hidden rounded-[2.5rem] bg-linear-to-r from-primary via-primary to-primary/95 p-px shadow-2xl">
         <div className="relative rounded-[2.5rem] bg-primary px-8 py-10 md:px-12 md:py-12">
           {/* Elementos decorativos */}
           <div className="absolute -top-10 -right-10 h-40 w-40 rounded-full bg-white/5 blur-3xl" />

@@ -25,13 +25,6 @@ const navLinks = [
   },
 ];
 
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
-const whatsappData = {
-  phone: WHATSAPP_NUMBER,
-  message:
-    "Hola, me gustaría agendar un servicio de limpieza.",
-};
-
 export default function Header() {
   const pathname = usePathname();
   const [mobileNavOpen, setMobileNavOpen] = useState(false);

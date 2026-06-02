@@ -99,7 +99,7 @@ export default function Footer() {
     {/* Contacto */}
     <div
       id="contacto"
-      className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-7 backdrop-blur-md"
+      className="rounded-[2rem] border border-white/10 bg-white/3 p-7 backdrop-blur-md"
     >
       <h3 className="text-2xl font-bold text-white">
         Contáctanos
@@ -203,7 +203,7 @@ export default function Footer() {
   </div>
 
   {/* Trabaja con nosotros */}
-  <div className="mt-14 rounded-[2rem] border border-white/10 bg-gradient-to-r from-white/[0.04] to-white/[0.02] p-7 backdrop-blur-md md:p-8">
+  <div className="mt-14 rounded-[2rem] border border-white/10 bg-linear-to-r from-white/4 to-white/2 p-7 backdrop-blur-md md:p-8">
     <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
       <div className="flex items-start gap-4">
         <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-cta/15">

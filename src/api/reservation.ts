@@ -15,7 +15,7 @@ export interface CreateReservationDto {
     numeroDocumento: string;
 
     referido: string;
-    tipoServicio: string;
+    planServicio: string;
     requerimientos: string | null;
     fechas: string[];
     hora: string;

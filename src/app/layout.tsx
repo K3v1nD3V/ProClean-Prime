@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
+import Script from "next/script";
 
 import "./globals.css";
 
@@ -35,6 +36,10 @@ export default function RootLayout({
         figtree.variable
       )}
     >
+      <head>
+        <Script src="https://checkout.bold.co/library/boldPaymentButton.js" async ></Script>
+      </head>
+
       <body className="min-h-full font-sans flex flex-col overflow-x-hidden">
         <Header />
 

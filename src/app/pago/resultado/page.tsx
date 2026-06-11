@@ -1,16 +1,12 @@
-"use client";
+interface PageProps {
+  searchParams: Promise<Record<string, string>>;
+}
 
-import { useSearchParams } from "next/navigation";
-
-export default function PaymentResultPage() {
-  const searchParams = useSearchParams();
-
-  const params = Object.fromEntries(
-    searchParams.entries()
-  );
-
-  console.log(params);
-
+export default async function PaymentResultPage({
+  searchParams,
+}: PageProps) {
+  const params = await searchParams;
+    console.log("Payment result params:", params);
   return (
     <div className="mx-auto max-w-3xl py-20">
       <h1 className="text-3xl font-bold">

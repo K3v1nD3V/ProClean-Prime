@@ -3,7 +3,6 @@
 import { createReservation } from "@/api/reservation";
 import { createBoldOrder } from "@/api/bold";
 //UTILS
-import { calculateReservationPrice } from "@/utils/pricing";
 import {loadBoldCheckout} from "@/utils/loadBoldCheckout";
 //TYPES
 //HOOKS
@@ -72,8 +71,8 @@ export default function ReservaPage() {
           description:
             `Reserva ${form.planServicio} - ${form.nombre} ${form.apellido}`,
 
-          redirectionUrl:
-            `${window.location.origin}/pago/resultado`,
+          // redirectionUrl:
+          //   `${window.location.origin}/pago/resultado`,
         });
         console.log({
           orderId: order.reference,

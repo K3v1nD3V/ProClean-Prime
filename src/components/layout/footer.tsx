@@ -241,7 +241,7 @@ export default function Footer() {
             reservados.
           </p>
             <a
-                href="https://wa.me/573001234567?text=Hola%20Kevin,%20vi%20tu%20trabajo%20en%20ProClean%20y%20me%20gustaría%20cotizar%20una%20página%20web."
+                href="https://wa.me/573238893608?text=Hola%20Kevin,%20vi%20tu%20trabajo%20en%20ProClean%20y%20me%20gustaría%20cotizar%20una%20página%20web."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 opacity-70 transition hover:opacity-100"

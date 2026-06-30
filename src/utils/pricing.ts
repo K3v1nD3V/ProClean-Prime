@@ -49,37 +49,45 @@ export function calculateReservationPrice(form: FormState) {
     form.planServicio
   );
 
+  // Precio sin descuentos
   const brutalPrice = BASE_PRICE * days;
 
+  // Descuento por cantidad de días
   const volumeDiscountAmount =
     brutalPrice * volumeDiscount;
 
+  // Precio después del descuento por días
   const priceAfterVolumeDiscount =
     brutalPrice - volumeDiscountAmount;
 
+  // Descuento por plan
   const planDiscountAmount =
     priceAfterVolumeDiscount * planDiscount;
 
+  // Precio final
   const finalPrice =
     priceAfterVolumeDiscount - planDiscountAmount;
 
+  // Ahorro total
   const totalDiscountAmount =
     volumeDiscountAmount + planDiscountAmount;
 
+  // Porcentaje total de descuento (0.12 = 12%)
+  const totalDiscount =
+    brutalPrice > 0
+      ? totalDiscountAmount / brutalPrice
+      : 0;
+
   return {
-    days,
-    basePrice: BASE_PRICE,
-
-    brutalPrice,
-
+    basePrice: brutalPrice,
     finalPrice,
 
     volumeDiscount,
     planDiscount,
+    totalDiscount,
 
     volumeDiscountAmount,
     planDiscountAmount,
-
     totalDiscountAmount,
   };
 }

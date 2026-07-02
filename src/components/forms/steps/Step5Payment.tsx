@@ -59,7 +59,7 @@ export function Step5Payment({
 
         <div className="space-y-2">
             <p className="text-sm text-zinc-600">
-                {pricing.days} servicio(s)
+              {form.fechas.length} día(s) de servicio
             </p>
 
             <p className="text-3xl font-bold">
